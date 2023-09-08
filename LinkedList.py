@@ -27,6 +27,7 @@ class Linked_List:
         self.length += 1
 
     def insert_head(self, data):
+        """Добавление элемента в начало списка"""
         node = self.Node(data)
         if self.head:
             node.next_node = self.head
@@ -104,16 +105,6 @@ class Linked_List:
             prev_node = cur_node
             cur_node = next_node
         self.head = prev_node
-
-    # def put(self, value):
-    #     """Добавление в конец списка"""
-    #     el = self.head
-    #     if el is None:
-    #         self.head = self.Node(value)
-    #         return
-    #     while el.next is not None:
-    #         el = el.next
-    #     el.next = self.Node(value)
 
     class Node:
         def __init__(self, data):
